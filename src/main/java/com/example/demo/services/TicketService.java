@@ -1,11 +1,11 @@
 package com.example.demo.services;
 
-import com.example.demo.models.Something;
+import com.example.demo.models.Ticket;
 import java.util.List;
 
 public interface TicketService {
 
-  Something findById(Long id);
-  List<Something> findAll();
-  void save (Something something);
+  Ticket findById(Long id);
+  List<Ticket> findAll();
+  void save (Ticket ticket);
 }

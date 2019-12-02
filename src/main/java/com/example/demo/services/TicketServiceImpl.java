@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.models.Something;
+import com.example.demo.models.Ticket;
 import com.example.demo.repos.TicketRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,17 +17,17 @@ public class TicketServiceImpl implements TicketService {
   }
 
   @Override
-  public Something findById(Long id) {
+  public Ticket findById(Long id) {
     return ticketRepo.findById(id).orElse(null);
   }
 
   @Override
-  public List<Something> findAll() {
+  public List<Ticket> findAll() {
     return ticketRepo.findAll();
   }
 
   @Override
-  public void save(Something something) {
-    ticketRepo.save(something);
+  public void save(Ticket ticket) {
+    ticketRepo.save(ticket);
   }
 }

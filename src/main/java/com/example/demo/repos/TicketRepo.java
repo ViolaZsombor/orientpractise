@@ -1,14 +1,14 @@
 package com.example.demo.repos;
 
-import com.example.demo.models.Something;
+import com.example.demo.models.Ticket;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TicketRepo extends CrudRepository<Something, Long> {
+public interface TicketRepo extends CrudRepository<Ticket, Long> {
 
-  Optional<Something> findById(Long id);
-  List<Something> findAll();
+  Optional<Ticket> findById(Long id);
+  List<Ticket> findAll();
 }
