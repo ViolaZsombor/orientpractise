@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import org.springframework.data.annotation.CreatedDate;
 
 @Entity
 public class Ticket {
@@ -11,22 +12,22 @@ public class Ticket {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String reporte;
+  private String reporter;
   private String manufacturer;
   private String serial_number;
   private String description;
-  private Date date;
+  @CreatedDate
+  private Date date = new Date ();
 
   public Ticket() {
   }
 
-  public Ticket(String reporte, String manufacturer, String serial_number,
-      String description, Date date) {
-    this.reporte = reporte;
+  public Ticket(String reporter, String manufacturer, String serial_number,
+      String description) {
+    this.reporter = reporter;
     this.manufacturer = manufacturer;
     this.serial_number = serial_number;
     this.description = description;
-    this.date = date;
   }
 
   public Long getId() {
@@ -37,12 +38,12 @@ public class Ticket {
     this.id = id;
   }
 
-  public String getReporte() {
-    return reporte;
+  public String getReporter() {
+    return reporter;
   }
 
-  public void setReporte(String reporte) {
-    this.reporte = reporte;
+  public void setReporter(String reporter) {
+    this.reporter = reporter;
   }
 
   public String getManufacturer() {

@@ -23,6 +23,6 @@ public class DemoApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    ticketRepo.save(new Ticket("doddy","dell","AF443", "bad keys",2012.02.01))
+    ticketRepo.save(new Ticket("doddy","dell","AF443", "bad keys"));
   }
 }

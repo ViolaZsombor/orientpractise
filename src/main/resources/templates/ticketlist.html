@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Error reporter</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Reporter</th>
+    <th>Manufacturer</th>
+    <th>Serial Number</th>
+    <th>Desc</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="ticket: ${tickets}">
+    <td th:text="${ticket.getId()}"></td>
+    <td th:text="${ticket.getReporter()}"></td>
+    <td th:text="${ticket.getManufacturer()}"></td>
+    <td th:text="${ticket.getSerial_number()}"></td>
+    <td th:text="${ticket.getDescription()}"></td>
+    <td th:text="${ticket.getDate()}"></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
